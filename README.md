@@ -1,5 +1,8 @@
-#Product Selector
+# Product Selector
 Test app for product selection
 
-#start app
-yarn start / npm start 
+# install dependences
+yarn
+
+# start app
+yarn start
