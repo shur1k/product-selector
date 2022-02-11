@@ -1,20 +1,26 @@
-:host{
-  display: flex;
-  justify-content: center;
-}
-
 .product-selection {
-  margin-top: 1rem;
-  max-width: 900px;
-  padding: 0 1rem;
-  width: 100%;
+  &__content {
+    column-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem 0;
+    row-gap: 1.5rem;
 
-  &__panel-header{
-    padding: 0.5rem 1rem;
+    @media (min-width: 700px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
-  &__panel-title{
-    color: grey;
-    font-size: x-large;
+  &__product {
+    @media (min-width: 900px) {
+      &:nth-child(5) {
+        grid-column-start: 2;
+      }
+    }
   }
+
 }

@@ -1,0 +1,54 @@
+.product-tile {
+  align-items: center;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1.0) 0%, rgba(200, 200, 200, 0.3) 100%);
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow:  5px 5px 29px -16px rgba(72, 74, 84, 0.77);
+  cursor: pointer;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+
+  &--active {
+    background: radial-gradient(ellipse at center, rgba(60, 4, 191, 1.0) 0%, rgba(4, 1, 36, 1.0) 100%);
+  }
+
+  &__title{
+    color: grey;
+    font-size: large;
+
+    &--active {
+      color: white;
+    }
+  }
+
+  &__info {
+    background-color: grey;
+    border: 1px solid grey;
+    border-radius: 50%;
+    bottom:8px;
+    height: 15px;
+    right:10px;
+    position: absolute;
+    width: 15px;
+
+    &--active {
+      background-color: white;
+    }
+  }
+
+  &__icon {
+    bottom: -3px;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    position: absolute;
+    right:3px;
+
+    &--active {
+      color: grey;
+    }
+  }
+}

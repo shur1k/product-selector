@@ -1,0 +1,9 @@
+<div class="product-tile" [class.product-tile--active]="product.isActive" (click)="value.emit(product)">
+  <div class="product-tile__title" [class.product-tile__title--active]="product.isActive">{{product.name}}</div>
+  <div
+    class="product-tile__info"
+    [class.product-tile__info--active]="product.isActive"
+    tooltipClass="tooltip-style" placement="top" [ngbTooltip]="product.description">
+    <span class="product-tile__icon" [class.product-tile__icon--active]="product.isActive">?</span>
+  </div>
+</div>

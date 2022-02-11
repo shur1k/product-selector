@@ -1,10 +1,11 @@
-<div class="product-selection">
-    <mat-expansion-panel>
-      <mat-expansion-panel-header class="product-selection__panel-header">
-        <mat-panel-title class="product-selection__panel-title">
-          Wybór produktów
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <p>This is the primary content of the panel.</p>
-    </mat-expansion-panel>
-</div>
+<ps-expansion-panel [title]="panelTitle">
+  <div *ngIf="productsForm" [formGroup]="productsForm" class="product-selection__content">
+    <ng-container formArrayName="products">
+      <div class="product-selection__product" *ngFor="let productForm of productsData">
+        <div [formGroup]="productForm">
+            <ps-product-tile formControlName="prod" (value)="onEmit($event)"></ps-product-tile>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</ps-expansion-panel>

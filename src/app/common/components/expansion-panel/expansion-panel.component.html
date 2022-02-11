@@ -1,1 +1,10 @@
-<p>expansion-panel works!</p>
+<div class="expansion-panel">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header class="expansion-panel__panel-header">
+        <mat-panel-title class="expansion-panel__panel-title">
+          {{title}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-content></ng-content>
+    </mat-expansion-panel>
+</div>
